@@ -7,7 +7,7 @@ namespace LibraryTelegramBot_новий.Services
     {
         private readonly HttpClient _httpClient;
 
-        private readonly string _apiKey = "AIzaSyCK5UkqBK9Lp_cRMBkYBEm_PFtc9PJLjeM";
+        private readonly string _apiKey = "Апішка гугла";
 
         public GoogleBooksService(HttpClient httpClient)
         {
