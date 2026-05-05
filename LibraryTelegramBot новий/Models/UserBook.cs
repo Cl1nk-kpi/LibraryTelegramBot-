@@ -2,8 +2,7 @@
 {
     public class UserBook
     {
-        // Унікальний ID щоб потім розуміти яку саме книгу видаляти
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string Id { get; set; } = Guid.NewGuid().ToString(); // генерує унікальний ID
 
         public string Title { get; set; } = "";
         public string Authors { get; set; } = "";
@@ -13,3 +12,4 @@
         public string Status { get; set; } = "⏳ В планах";
     }
 }
+//Описує як виглядає книга яку користувач зберігає

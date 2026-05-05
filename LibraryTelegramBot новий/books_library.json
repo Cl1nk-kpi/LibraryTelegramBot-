@@ -1,0 +1,44 @@
+[
+  {
+    "Id": "string",
+    "Title": "Harry Potter",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  },
+  {
+    "Id": "string",
+    "Title": "Harry Potter",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  },
+  {
+    "Id": "string",
+    "Title": "string",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  },
+  {
+    "Id": "string",
+    "Title": "string",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  },
+  {
+    "Id": "string",
+    "Title": "string",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  },
+  {
+    "Id": "string",
+    "Title": "string",
+    "Authors": "string",
+    "ImageUrl": "string",
+    "Status": "string"
+  }
+]

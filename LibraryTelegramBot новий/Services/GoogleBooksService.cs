@@ -7,7 +7,7 @@ namespace LibraryTelegramBot_новий.Services
     {
         private readonly HttpClient _httpClient;
 
-        private readonly string _apiKey = "ТУТ МІЙ АПІ КЛЮЧ";
+        private readonly string _apiKey = "AIzaSyCK5UkqBK9Lp_cRMBkYBEm_PFtc9PJLjeM";
 
         public GoogleBooksService(HttpClient httpClient)
         {
@@ -30,15 +30,14 @@ namespace LibraryTelegramBot_новий.Services
             var books = new List<BookInfo>();
             foreach (var item in items.EnumerateArray())
             {
-                var info = item.GetProperty("volumeInfo");
+                var info = item.GetProperty("volumeInfo"); //У структурі Google API майже вся корисна інформація (назва, автор) лежить всередині  об'єкта volumeInfo
                 books.Add(new BookInfo
                 {
                     Title = info.TryGetProperty("title", out var t) ? t.GetString() : "Без назви",
                     Authors = info.TryGetProperty("authors", out var a) ? string.Join(", ", a.EnumerateArray()) : "Невідомо",
                     Description = info.TryGetProperty("description", out var d) ? d.GetString() : "Опису немає",
                     PreviewLink = info.TryGetProperty("infoLink", out var l) ? l.GetString() : "",
-                    ImageUrl = info.TryGetProperty("imageLinks", out var imgs) && imgs.TryGetProperty("thumbnail", out var thumb)
-                    ? thumb.GetString() : ""
+                    ImageUrl = info.TryGetProperty("imageLinks", out var imgs) && imgs.TryGetProperty("thumbnail", out var thumb) ? thumb.GetString() : "" // якщо нема хочаб одного то виводим пустий рядок
                 });
             }
             return books;

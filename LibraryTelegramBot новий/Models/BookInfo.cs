@@ -9,3 +9,4 @@
         public string ImageUrl { get; set; } = "";
     }
 }
+//інформація про книгу яку ми отримуємо від Google
